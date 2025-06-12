@@ -8,6 +8,15 @@ import Frame6 from "../assets/videos/Frame-6.mp4"
 import Frame7 from "../assets/videos/Frame-7.mp4"
 import Frame8 from "../assets/videos/Frame-8.mp4"
 import Frame3D from "../assets/videos/Frame-9.mp4"
+import Frame1_screen from "../assets/img/Frame-1_screen.png"
+import Frame2_screen from "../assets/img/Frame-2_screen.png"
+import Frame3_screen from "../assets/img/Frame-3_screen.png"
+import Frame4_screen from "../assets/img/Frame-4_screen.png"
+import Frame5_screen from "../assets/img/Frame-5_screen.png"
+import Frame6_screen from "../assets/img/Frame-6_screen.png"
+import Frame7_screen from "../assets/img/Frame-7_screen.png"
+import Frame8_screen from "../assets/img/Frame-8_screen.png"
+import Frame3D_screen from "../assets/img/Frame-9_screen.png"
 import FrameDrusil from "../assets/img/Drusil Paulo.jpg"
 import FrameEuritce from "../assets/img/Euritce Da Silva.jpg"
 
@@ -22,7 +31,7 @@ export const PORTFOLIO_ITEMS = [
     title: "Animação 2D - Campanha Verão",
     description: "Animação estilo cartoon para campanha de verão com personagens personalizados.",
     video: Frame1,
-    thumbnail: "/portfolio/2d-summer-thumb.jpg",
+    thumbnail: Frame1_screen,
     category: "2D",
     results: "Engajamento 3x maior que padrão do mercado"
   },
@@ -31,7 +40,7 @@ export const PORTFOLIO_ITEMS = [
     title: "Produto em 3D Realista",
     description: "Modelagem 3D hiper-realista para lançamento de novo produto.",
     video: Frame2,
-    thumbnail: "/portfolio/3d-product-thumb.jpg",
+    thumbnail: Frame2_screen,
     category: "2D",
     results: "Aumento de 40% em intenção de compra"
   },
@@ -40,7 +49,7 @@ export const PORTFOLIO_ITEMS = [
     title: "Explicativo 2D",
     description: "Vídeo explicativo animado para campanha educacional.",
     video: Frame3,
-    thumbnail: "/portfolio/2d-explainer-thumb.jpg",
+    thumbnail: Frame3_screen,
     category: "2D",
     results: "Retenção 78% maior que vídeos tradicionais"
   },
@@ -49,7 +58,7 @@ export const PORTFOLIO_ITEMS = [
     title: "Ambiente 2D Imersivo",
     description: "Tour virtual 360° por ambiente corporativo.",
     video: Frame4,
-    thumbnail: "/portfolio/3d-tour-thumb.jpg",
+    thumbnail: Frame4_screen,
     category: "2D",
     results: "Tempo médio de visualização: 4min32s"
   },
@@ -58,7 +67,7 @@ export const PORTFOLIO_ITEMS = [
     title: "Motion Graphics 2D",
     description: "Sequência animada para abertura de programa de TV.",
     video: Frame5,
-    thumbnail: "/portfolio/2d-motion-thumb.jpg",
+    thumbnail: Frame5_screen,
     category: "2D",
     results: "Viralizou com 2.5M de views"
   },
@@ -68,7 +77,7 @@ export const PORTFOLIO_ITEMS = [
     title: "Animação 3D de Produto",
     description: "Animação 3D para lançamento de novo gadget tecnológico.",
     video: Frame6,
-    thumbnail: "/portfolio/3d-gadget-thumb.jpg",
+    thumbnail: Frame6_screen,
     category: "2D",
     results: "Aumento de 50% em pré-vendas"
   },
@@ -77,7 +86,7 @@ export const PORTFOLIO_ITEMS = [
     title: "Vídeo Institucional 2D",
     description: "Vídeo institucional animado para empresa de tecnologia.",
     video: Frame7,
-    thumbnail: "/portfolio/2d-institutional-thumb.jpg",
+    thumbnail: Frame7_screen,
     category: "2D",
     results: "Aumento de 30% em reconhecimento de marca"
   },
@@ -86,7 +95,7 @@ export const PORTFOLIO_ITEMS = [
     title: "Animação Interativa 3D",
     description: "Experiência interativa em 3D para evento corporativo.",
     video: Frame8,
-    thumbnail: "/portfolio/3d-interactive-thumb.jpg",
+    thumbnail: Frame8_screen,
     category: "2D",
     results: "Engajamento médio de 5min por usuário"
   }
@@ -96,13 +105,70 @@ export const PORTFOLIO_ITEMS = [
     title: "Animação 3D de Produto",
     description: "Animação 3D de alta qualidade para lançamento de produto.",
     video: Frame3D,
-    thumbnail: "/portfolio/3d-product-thumb.jpg",
+    thumbnail: Frame3D_screen,
     category: "3D",
     results: "Aumento de 40% em intenção de compra"
   }
 ]
 
 export const CATEGORIES = ["Todos", "2D", "3D"]
+
+export const BLOG_POSTS = [
+  {
+    id: 1,
+    title: "Tendências de Design para 2024",
+    excerpt: "As principais tendências visuais que vão dominar o mercado criativo no próximo ano.",
+    image: "/blog/design-trends.jpg",
+    category: "Design",
+    date: "15 Nov 2023",
+    readTime: "5 min"
+  },
+  {
+    id: 2,
+    title: "Como Criar Campanhas que Viralizam",
+    excerpt: "Estratégias comprovadas para aumentar o engajamento orgânico nas redes sociais.",
+    image: "/blog/viral-campaigns.jpg",
+    category: "Marketing",
+    date: "2 Nov 2023",
+    readTime: "8 min"
+  },
+  {
+    id: 3,
+    title: "O Poder do Storytelling nas Marcas",
+    excerpt: "Como narrativas bem construídas podem transformar a percepção do seu público.",
+    image: "/blog/storytelling.jpg",
+    category: "Branding",
+    date: "25 Out 2023",
+    readTime: "6 min"
+  },
+  {
+    id: 4,
+    title: "SEO para Criativos: Guia Completo",
+    excerpt: "Técnicas de otimização para busca orgânica aplicadas ao mercado criativo.",
+    image: "/blog/seo-creatives.jpg",
+    category: "Digital",
+    date: "12 Out 2023",
+    readTime: "10 min"
+  },
+  {
+    id: 5,
+    title: "Design Thinking na Publicidade",
+    excerpt: "Como aplicar metodologias de DT para criar campanhas mais eficientes.",
+    image: "/blog/design-thinking.jpg",
+    category: "Estratégia",
+    date: "5 Out 2023",
+    readTime: "7 min"
+  },
+  {
+    id: 6,
+    title: "O Futuro do Vídeo Marketing",
+    excerpt: "Tendências e inovações no consumo de conteúdo audiovisual.",
+    image: "/blog/video-marketing.jpg",
+    category: "Vídeo",
+    date: "28 Set 2023",
+    readTime: "9 min"
+  }
+]
 
 export const SERVICES_DETAILS = [
   {

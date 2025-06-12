@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react"
+import { Instagram, Facebook, Linkedin, MapPin, Mail, Phone } from "lucide-react"
 import { menuItems, SERVICES_DETAILS } from "@/lib/constants"
 
 export function Footer() {
@@ -33,24 +33,25 @@ export function Footer() {
             {/* Redes Sociais */}
             <div className="flex gap-4">
               <a
-                href={"https://www.instagram.com/duramat/"}
-                className="rounded-full bg-[#333] hover:bg-dourado hover:text-cinza_escuro p-3">
+                href="https://www.instagram.com/duramat_studio?igsh=Zmc1dmh0MjZxZzBw"
+                target="_blank"
+                className="rounded-full bg-[#333] hover:bg-dourado hover:text-cinza_escuro p-3"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href={"https://www.facebook.com/duramat/"}
-                className="rounded-full bg-[#333] hover:bg-dourado hover:text-cinza_escuro p-3">
+                target="_blank"
+                href="https://www.facebook.com/duramat/"
+                className="rounded-full bg-[#333] hover:bg-dourado hover:text-cinza_escuro p-3"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href={"https://www.linkedin.com/duramat/"}
-                className="rounded-full bg-[#333] hover:bg-dourado hover:text-cinza_escuro p-3">
+                target="_blank"
+                href="https://www.linkedin.com/company/studio-material-duro/"
+                className="rounded-full bg-[#333] hover:bg-dourado hover:text-cinza_escuro p-3"
+              >
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href={"https://www.youtube.com/duramat/"}
-                className="rounded-full bg-[#333] hover:bg-dourado hover:text-cinza_escuro p-3">
-                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -92,29 +93,34 @@ export function Footer() {
           </div>
 
           {/* Contato */}
-          <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Vamos Conversar</h4>
-            <address className="not-italic space-y-4 text-[#999]">
-              <p className="flex items-start gap-3">
-                <svg className="h-5 w-5 mt-0.5 text-dourado" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                Av. Criatividade, 123<br />
-                São Paulo - SP, 04567-890
-              </p>
-              <p className="flex items-center gap-3">
-                <svg className="h-5 w-5 text-dourado" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                contato@criativamente.com
-              </p>
-              <p className="flex items-center gap-3">
-                <svg className="h-5 w-5 text-dourado" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                (11) 98765-4321
-              </p>
+          <div className="text-white space-y-6">
+            <h4 className="font-bold text-xl md:text-2xl">Vamos Conversar</h4>
+            <address className="not-italic space-y-5 text-white/70 text-sm md:text-base">
+              <div className="flex items-start gap-3">
+                <MapPin className="text-dourado mt-1 w-5 h-5 shrink-0" />
+                <p>
+                  Bairro Vila Alice<br />
+                  Junto ao Instituto Politécnico Industrial de Luanda – IPIL (Ex-IMIL)
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Mail className="text-dourado w-5 h-5 shrink-0" />
+                <a
+                  href="mailto:studioduramat@gmail.com"
+                  className="hover:underline break-all"
+                >
+                  studioduramat@gmail.com
+                </a>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <Phone className="text-dourado mt-1 w-5 h-5 shrink-0" />
+                <div>
+                  <p>+224 927 449 491</p>
+                  <p>+224 927 438 714</p>
+                </div>
+              </div>
             </address>
           </div>
         </div>
@@ -122,7 +128,7 @@ export function Footer() {
         {/* Divisor e Copyright */}
         <div className="border-t border-[#333] mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[#777] text-sm">
-            &copy; {new Date().getFullYear()} CriativaMente. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Duramat. Todos os direitos reservados.
           </p>
 
           <div className="flex gap-6">

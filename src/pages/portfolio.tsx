@@ -21,15 +21,15 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
-      <div className="relative h-64 md:h-80 bg-gradient-to-r from-[#262728] to-[#3a3b3c] flex items-center justify-center">
+      <div className="relative mt-4 md:mt-1 h-64 md:h-80 bg-gradient-to-r from-cinza_escuro to-[#3a3b3c] flex items-center justify-center">
         <motion.div
           className="relative text-center px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-[#EEB23E] mb-4">Nosso Portfólio de Vídeos</h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <h1 className="text-3xl md:text-5xl font-bold text-[#EEB23E] mb-4">Nosso Portfólio de Vídeos</h1>
+          <p className="text-white max-w-2xl mx-auto">
             Criações em 2D e 3D que contam histórias e geram resultados
           </p>
         </motion.div>

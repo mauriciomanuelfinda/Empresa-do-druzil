@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Frame8 from "../assets/videos/Frame-8.mp4";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
@@ -25,15 +26,12 @@ export function Hero() {
         autoPlay
         muted
         loop
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
-      >
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-        Seu navegador não suporta vídeo.
-      </video>
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src={Frame8}
+      />
 
       {/* Overlay escuro */}
-      <div className="absolute inset-0 bg-cinza_escuro/80 z-0" />
+      <div className="absolute inset-0 bg-cinza_escuro/50 z-0" />
 
       {/* Conteúdo sobreposto */}
       <div className="container px-6 md:px-16 z-10 mx-auto flex flex-col items-start md:items-start justify-center gap-6 text-center md:text-left">

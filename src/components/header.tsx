@@ -2,24 +2,19 @@ import { Link, useLocation, useNavigate } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, Search } from "lucide-react"
-//import Logo from "@/assets/img/logo.png"
+import Logo from "@/assets/img/logotipo.svg"
 import { menuItems } from "@/lib/constants"
+import { linkClasses } from "@/lib/link_classes"
 
 export function Header() {
   const { pathname } = useLocation()
   const navigte = useNavigate()
 
-  const linkClasses = (path: string) => {
-    const baseClasses = "transition-colors flex items-center gap-1 hover:text-dourado"
-    const activeClasses = pathname === path ? "text-dourado" : "text-white"
-    return `${baseClasses} ${activeClasses}`
-  }
-
   return (
-    <header className="fixed top-0 z-50 w-full bg-cinza_escuro backdrop-blur-sm border-b border-[#3a3b3c]">
+    <header className="fixed top-0 z-50 w-full bg-black/20 backdrop-blur-sm">
       <div className="flex h-14 md:h-20  items-center justify-between w-[95%] mx-auto">
-        <Link to="/" className="flex items-center space-x-3">
-          {/* <img src={Logo} alt="CriativaMente" className="h-12" /> */}
+        <Link to="/" className="flex items-center justify-center space-x-3">
+          <img src={Logo} alt="CriativaMente" className="h-10" />
           <h3 className="text-2xl text-white font-bold">
             <span className="text-dourado">Dura</span>mat
           </h3>
@@ -31,7 +26,7 @@ export function Header() {
             <div key={item.path} className="relative group">
               <Link
                 to={item.path}
-                className={linkClasses(item.path)}
+                className={linkClasses(item.path, pathname)}
               >
                 {item.label}
               </Link>
@@ -48,14 +43,10 @@ export function Header() {
 
         {/* Menu Mobile */}
         <div className="md:hidden flex items-center gap-4">
-          <Button variant="ghost" size="icon" className="text-white hover:bg-[#3a3b3c]">
-            <Search className="h-5 w-5" />
-          </Button>
-          <Sheet>
+          <Search className="h-6 w-6 text-white hover:bg-[#3a3b3c]" />
+          <Sheet >
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-[#3a3b3c]">
-                <Menu className="h-5 w-5" />
-              </Button>
+                <Menu className="h-6 w-6 text-white hover:bg-[#3a3b3c]" />
             </SheetTrigger>
             <SheetContent side="right" className="w-72 bg-cinza_escuro border-l border-[#3a3b3c]">
               <div className="flex flex-col h-full">
@@ -71,7 +62,7 @@ export function Header() {
                     <div key={item.path} className="border-b border-[#3a3b3c] pb-2">
                       <Link
                         to={item.path}
-                        className={`${linkClasses(item.path)} py-3 px-2 rounded-md hover:bg-[#3a3b3c] w-full`}
+                        className={`${linkClasses(item.path, pathname)} py-3 px-2 rounded-md hover:bg-[#3a3b3c] w-full`}
                       >
                         {item.label}
                       </Link>

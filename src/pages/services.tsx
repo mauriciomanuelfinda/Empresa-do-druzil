@@ -21,7 +21,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-3xl md:text-5xl font-bold text-dourado mb-4 ">Nossos Serviços</h1>
-          <p className="text-dourado/90 max-w-2xl mx-auto">
+          <p className="text-white max-w-2xl mx-auto">
             Soluções criativas integradas para impulsionar sua marca
           </p>
         </motion.div>

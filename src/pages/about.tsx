@@ -8,27 +8,20 @@ import { TeamMemberCard } from "@/components/team_member_card"
 
 export default function About() {
   return (
-    <div className="py-12 bg-gray-100">
-      {/* Hero Section */}
-      <motion.section
-        className="relative h-64 md:h-96 overflow-hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-t from-cinza_escuro/70 to-cinza_escuro/30 flex items-end">
-          <div className="container px-4 pb-12">
-            <motion.h1
-              className="text-4xl md:text-5xl font-bold text-dourado"
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-            >
-              Sobre Nós
-            </motion.h1>
-          </div>
-        </div>
-      </motion.section>
+    <div className=" bg-gray-100">
+      <div className="relative h-64 md:h-80 bg-gradient-to-r from-cinza_escuro to-[#3a3b3c] flex items-center justify-center">
+        <motion.div
+          className="relative text-center px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-3xl md:text-5xl font-bold text-dourado mb-4">Sobre Nós</h1>
+          <p className="text-white max-w-2xl mx-auto">
+            Conheça a Duramat, um estúdio de comunicação e design que transforma ideias em resultados através de criatividade e inovação.
+          </p>
+        </motion.div>
+      </div>
 
       {/* Main Content */}
       <div className="container px-4 mt-12">
