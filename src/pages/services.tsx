@@ -1,60 +1,26 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
-
-const SERVICES = [
-  {
-    title: "Branding & Identidade Visual",
-    description: "Desenvolvimento de marcas fortes e memoráveis com estratégias de posicionamento e identidade visual impactante.",
-    icon: "🎨",
-    features: [
-      "Naming e posicionamento",
-      "Design de logotipo",
-      "Manual de identidade visual",
-      "Arquitetura de marca"
-    ]
-  },
-  {
-    title: "Mídia Digital & Social Media",
-    description: "Estratégias digitais completas para aumentar seu alcance e engajamento nas redes sociais.",
-    icon: "📱",
-    features: [
-      "Gestão de redes sociais",
-      "Anúncios patrocinados",
-      "Influencer marketing",
-      "Relatórios de performance"
-    ]
-  },
-  {
-    title: "Produção de Vídeo",
-    description: "Criação de conteúdo audiovisual profissional para TV, redes sociais e campanhas publicitárias.",
-    icon: "🎥",
-    features: [
-      "Vídeos institucionais",
-      "Motion graphics",
-      "Campanhas publicitárias",
-      "Edição profissional"
-    ]
-  }
-]
+import { SERVICES_DETAILS } from "@/lib/constants"
+import { ServiceCard } from "@/components/service_card"
 
 export default function Services() {
   return (
     <motion.div
-      className="min-h-screen bg-[#f5f5f5]"
+      className="min-h-screen mt-4 md:mt-1 bg-[#f5f5f5]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
       {/* Hero Section */}
-      <div className="relative h-64 md:h-80 bg-gradient-to-r from-cinza_escuro to-[#3a3b3c] flex items-center justify-center">
+      <div className="relative mt-4 md:mt-1 h-64 md:h-80 bg-gradient-to-r from-cinza_escuro to-[#3a3b3c] flex items-center justify-center">
         <motion.div
           className="relative text-center px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-dourado mb-4">Nossos Serviços</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-dourado mb-4 ">Nossos Serviços</h1>
           <p className="text-dourado/90 max-w-2xl mx-auto">
             Soluções criativas integradas para impulsionar sua marca
           </p>
@@ -76,34 +42,15 @@ export default function Services() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {SERVICES.map((service, index) => (
-            <motion.div
+          {SERVICES_DETAILS.map((service, index) => (
+            <ServiceCard
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
-            >
-              <div className="p-6">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold text-cinza_escuro mb-3">{service.title}</h3>
-                <p className="text-[#666] mb-4">{service.description}</p>
-                
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="text-dourado mr-2">•</span>
-                      <span className="text-[#444]">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <Button variant="outline" className="border-dourado text-dourado hover:bg-dourado/10 w-full">
-                  Saiba Mais
-                </Button>
-              </div>
-            </motion.div>
+              title={service.title}
+              highlights={service.highlights}
+              icon={service.icon}
+              description={service.description}
+              delay={index}
+            />
           ))}
         </div>
 

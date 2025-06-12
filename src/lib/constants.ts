@@ -1,32 +1,108 @@
-export const CLIENTS = [
-  { name: "Nike", logo: "/logos/nike.svg" },
-  { name: "Coca-Cola", logo: "/logos/coca-cola.svg" },
-  { name: "Apple", logo: "/logos/apple.svg" },
-  { name: "Samsung", logo: "/logos/samsung.svg" },
-  { name: "Amazon", logo: "/logos/amazon.svg" },
-  { name: "Adidas", logo: "/logos/adidas.svg" }
+import { Palette, Video } from "lucide-react";
+import Frame1 from "../assets/videos/Frame-1.mp4"
+import Frame2 from "../assets/videos/Frame-2.mp4"
+import Frame3 from "../assets/videos/Frame-3.mov"
+import Frame4 from "../assets/videos/Frame-4.mov"
+import Frame5 from "../assets/videos/Frame-5.mp4"
+import Frame6 from "../assets/videos/Frame-6.mp4"
+import Frame7 from "../assets/videos/Frame-7.mp4"
+import Frame8 from "../assets/videos/Frame-8.mp4"
+import Frame3D from "../assets/videos/Frame-9.mp4"
+import FrameDrusil from "../assets/img/Drusil Paulo.jpg"
+import FrameEuritce from "../assets/img/Euritce Da Silva.jpg"
+
+export const MemberData = [
+  { nome: "Drusil Paulo", role: "CEO", image: FrameDrusil },
+  { nome: "Euritce Da Silva", role: "Gestor de projetos", image: FrameEuritce },
 ]
 
-export const SERVICES = [
+export const PORTFOLIO_ITEMS = [
   {
-    title: "Branding & Identidade Visual",
-    description: "Criação de marcas memoráveis com estratégias de posicionamento eficazes.",
-    image: "/services/branding.jpg",
-    video: "/cases/branding-case.mp4"
+    id: 1,
+    title: "Animação 2D - Campanha Verão",
+    description: "Animação estilo cartoon para campanha de verão com personagens personalizados.",
+    video: Frame1,
+    thumbnail: "/portfolio/2d-summer-thumb.jpg",
+    category: "2D",
+    results: "Engajamento 3x maior que padrão do mercado"
   },
   {
-    title: "Mídia Digital",
-    description: "Estratégias digitais completas para aumentar seu alcance e engajamento.",
-    image: "/services/digital.jpg",
-    video: "/cases/digital-case.mp4"
+    id: 2,
+    title: "Produto em 3D Realista",
+    description: "Modelagem 3D hiper-realista para lançamento de novo produto.",
+    video: Frame2,
+    thumbnail: "/portfolio/3d-product-thumb.jpg",
+    category: "2D",
+    results: "Aumento de 40% em intenção de compra"
   },
   {
-    title: "Produção de Vídeo",
-    description: "Conteúdo audiovisual profissional para campanhas publicitárias.",
-    image: "/services/video.jpg",
-    video: "/cases/video-case.mp4"
+    id: 3,
+    title: "Explicativo 2D",
+    description: "Vídeo explicativo animado para campanha educacional.",
+    video: Frame3,
+    thumbnail: "/portfolio/2d-explainer-thumb.jpg",
+    category: "2D",
+    results: "Retenção 78% maior que vídeos tradicionais"
+  },
+  {
+    id: 4,
+    title: "Ambiente 2D Imersivo",
+    description: "Tour virtual 360° por ambiente corporativo.",
+    video: Frame4,
+    thumbnail: "/portfolio/3d-tour-thumb.jpg",
+    category: "2D",
+    results: "Tempo médio de visualização: 4min32s"
+  },
+  {
+    id: 5,
+    title: "Motion Graphics 2D",
+    description: "Sequência animada para abertura de programa de TV.",
+    video: Frame5,
+    thumbnail: "/portfolio/2d-motion-thumb.jpg",
+    category: "2D",
+    results: "Viralizou com 2.5M de views"
+  },
+  {
+
+    id: 6,
+    title: "Animação 3D de Produto",
+    description: "Animação 3D para lançamento de novo gadget tecnológico.",
+    video: Frame6,
+    thumbnail: "/portfolio/3d-gadget-thumb.jpg",
+    category: "2D",
+    results: "Aumento de 50% em pré-vendas"
+  },
+  {
+    id: 7,
+    title: "Vídeo Institucional 2D",
+    description: "Vídeo institucional animado para empresa de tecnologia.",
+    video: Frame7,
+    thumbnail: "/portfolio/2d-institutional-thumb.jpg",
+    category: "2D",
+    results: "Aumento de 30% em reconhecimento de marca"
+  },
+  {
+    id: 8,
+    title: "Animação Interativa 3D",
+    description: "Experiência interativa em 3D para evento corporativo.",
+    video: Frame8,
+    thumbnail: "/portfolio/3d-interactive-thumb.jpg",
+    category: "2D",
+    results: "Engajamento médio de 5min por usuário"
   }
-];
+  ,
+  {
+    id: 9,
+    title: "Animação 3D de Produto",
+    description: "Animação 3D de alta qualidade para lançamento de produto.",
+    video: Frame3D,
+    thumbnail: "/portfolio/3d-product-thumb.jpg",
+    category: "3D",
+    results: "Aumento de 40% em intenção de compra"
+  }
+]
+
+export const CATEGORIES = ["Todos", "2D", "3D"]
 
 export const SERVICES_DETAILS = [
   {
@@ -34,6 +110,7 @@ export const SERVICES_DETAILS = [
     description: "Desenvolvemos identidades visuais poderosas que contam a história da sua marca",
     videoThumbnail: "/branding-video-thumb.jpg",
     videoUrl: "#branding-video",
+    icon: Palette, // 🎨 ícone que representa design/identidade visual
     highlights: [
       "Criação de logotipo",
       "Manual da marca",
@@ -42,22 +119,11 @@ export const SERVICES_DETAILS = [
     ]
   },
   {
-    title: "Mídia Digital",
-    description: "Campanhas digitais sob medida para alcançar seus públicos estratégicos",
-    videoThumbnail: "/digital-video-thumb.jpg",
-    videoUrl: "#digital-video",
-    highlights: [
-      "Gestão de redes sociais",
-      "Anúncios patrocinados",
-      "SEO e conteúdo",
-      "Performance marketing"
-    ]
-  },
-  {
     title: "Produção de Vídeo",
     description: "Conteúdo audiovisual profissional que engaja e converte",
     videoThumbnail: "/video-video-thumb.jpg",
     videoUrl: "#video-video",
+    icon: Video,
     highlights: [
       "Vídeos institucionais",
       "Motion graphics",
@@ -65,7 +131,8 @@ export const SERVICES_DETAILS = [
       "Edição profissional"
     ]
   }
-]
+];
+
 
 export const PORTFOLIO_VIDEOS = [
   {

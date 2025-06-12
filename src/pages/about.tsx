@@ -3,12 +3,14 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 import { ChevronRight } from "lucide-react"
+import { MemberData } from "@/lib/constants"
+import { TeamMemberCard } from "@/components/team_member_card"
 
 export default function About() {
   return (
     <div className="py-12 bg-gray-100">
       {/* Hero Section */}
-      <motion.section 
+      <motion.section
         className="relative h-64 md:h-96 overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -38,9 +40,9 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="bg-white p-8 rounded-xl shadow-md border border-gray-200"
           >
-            <h2 className="text-3xl font-bold text-cinza_escuro mb-6">CriativaMente Publicidade</h2>
+            <h2 className="text-3xl font-bold text-cinza_escuro mb-6">Duramat</h2>
             <p className="text-lg text-gray-700 mb-6">
-              Somos uma agência full-service de comunicação e design, especializada em criar soluções criativas que geram resultados tangíveis para nossos clientes.
+              Somos um studio a full-service de comunicação e design, especializada em criar soluções criativas que geram resultados tangíveis para nossos clientes.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-dourado/10 p-4 rounded-lg border border-dourado/20">
@@ -77,19 +79,19 @@ export default function About() {
             className="bg-white p-8 rounded-xl shadow-md border border-gray-200"
           >
             <h2 className="text-3xl font-bold text-cinza_escuro mb-6">Nossa Essência</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
                 <h3 className="text-xl font-semibold text-dourado mb-3">Missão</h3>
                 <p className="text-gray-700">
-                  Criar soluções de comunicação inovadoras que conectam marcas com seu público-alvo, 
+                  Criar soluções de comunicação inovadoras que conectam marcas com seu público-alvo,
                   gerando valor e resultados mensuráveis através de estratégias criativas e inteligentes.
                 </p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-dourado mb-3">Visão</h3>
                 <p className="text-gray-700">
-                  Ser reconhecida como a agência mais criativa e eficiente do mercado, 
+                  Ser reconhecida como a agência mais criativa e eficiente do mercado,
                   transformando desafios em oportunidades através de ideias que inspiram e vendem.
                 </p>
               </div>
@@ -124,25 +126,14 @@ export default function About() {
           >
             <h2 className="text-3xl font-bold text-cinza_escuro mb-8">Conheça Nosso Time</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                { name: "Ana Silva", role: "Diretora Criativa" },
-                { name: "Carlos Menezes", role: "Diretor de Arte" },
-                { name: "Mariana Costa", role: "Gerente de Contas" },
-                { name: "Pedro Almeida", role: "Estrategista Digital" }
-              ].map((member, index) => (
-                <motion.div 
+              {MemberData.map((member, index) => (
+                <TeamMemberCard
                   key={index}
-                  whileHover={{ y: -5 }}
-                  className="bg-white p-4 rounded-lg shadow-md border border-gray-200"
-                >
-                  <div className="aspect-square overflow-hidden rounded-full mb-4 mx-auto w-32 h-32 bg-dourado/20 flex items-center justify-center">
-                    <span className="text-4xl font-bold text-cinza_escuro">
-                      {member.name.charAt(0)}
-                    </span>
-                  </div>
-                  <h3 className="font-bold text-cinza_escuro">{member.name}</h3>
-                  <p className="text-dourado">{member.role}</p>
-                </motion.div>
+                  name={member.nome}
+                  role={member.role}
+                  image={member.image}
+                  delay={index}
+                />
               ))}
             </div>
           </motion.section>
