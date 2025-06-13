@@ -28,7 +28,7 @@ export const PortfolioCard = ({
           {playingVideo === id ? (
             <CustomizerVideo
               src={video}
-              className="w-full h-64 object-cover"
+              className="w-full object-cover"
               onVideoEnd={onVideoEnd}
             />
           ) : (
