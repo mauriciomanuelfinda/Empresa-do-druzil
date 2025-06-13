@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -36,7 +36,7 @@ export default function Contact() {
             className="bg-white rounded-xl shadow-md p-8 border border-gray-200"
           >
             <h2 className="text-2xl font-bold text-cinza_escuro mb-6">Envie sua mensagem</h2>
-            
+
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -105,7 +105,7 @@ export default function Contact() {
           >
             <div className="bg-white rounded-xl shadow-md p-8 border border-gray-200">
               <h2 className="text-2xl font-bold text-cinza_escuro mb-6">Informações de Contato</h2>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-dourado/10 rounded-full text-dourado">
@@ -113,8 +113,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-cinza_escuro">Endereço</h3>
-                    <p className="text-gray-600">Rua Criativa, 123 - Sala 45</p>
-                    <p className="text-gray-600">São Paulo/SP - CEP 01234-567</p>
+                    <p
+                      className="text-gray-600"
+                    >
+                      Bairro Vila Alice<br />
+                      Junto ao Instituto Politécnico Industrial de Luanda – IPIL (Ex-IMIL)
+                    </p>
                   </div>
                 </div>
 
@@ -124,8 +128,11 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-cinza_escuro">Telefone</h3>
-                    <p className="text-gray-600">(11) 98765-4321</p>
-                    <p className="text-gray-600">(11) 3456-7890</p>
+
+                    <div>
+                      <p className="text-gray-600">+224 927 449 491</p>
+                      <p className="text-gray-600">+224 927 438 714</p>
+                    </div>
                   </div>
                 </div>
 
@@ -135,8 +142,13 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-cinza_escuro">E-mail</h3>
-                    <p className="text-gray-600">contato@criativamente.com</p>
-                    <p className="text-gray-600">comercial@criativamente.com</p>
+
+                    <a
+                      href="mailto:studioduramat@gmail.com"
+                      className="hover:underline break-all text-gray-600"
+                    >
+                      studioduramat@gmail.com
+                    </a>
                   </div>
                 </div>
               </div>
@@ -145,7 +157,7 @@ export default function Contact() {
             {/* Business Hours */}
             <div className="bg-white rounded-xl shadow-md p-8 border border-gray-200">
               <h2 className="text-2xl font-bold text-cinza_escuro mb-6">Horário de Funcionamento</h2>
-              
+
               <div className="space-y-4">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Segunda - Sexta</span>
@@ -165,17 +177,31 @@ export default function Contact() {
             {/* Social Media */}
             <div className="bg-white rounded-xl shadow-md p-8 border border-gray-200">
               <h2 className="text-2xl font-bold text-cinza_escuro mb-6">Redes Sociais</h2>
-              
-              <div className="flex gap-4">
-                {['Instagram', 'LinkedIn', 'Facebook', 'YouTube'].map((social) => (
-                  <Button
-                    key={social}
-                    variant="outline"
-                    className="border-dourado text-cinza_escuro hover:bg-dourado/10"
+
+              <div className="flex items-center justify-center gap-4">
+                <div className="flex gap-4">
+                  <a
+                    href="https://www.instagram.com/duramat_studio?igsh=Zmc1dmh0MjZxZzBw"
+                    target="_blank"
+                    className="rounded-full bg-dourado hover:text-cinza_escuro p-3"
                   >
-                    {social}
-                  </Button>
-                ))}
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/duramat/"
+                    className="rounded-full bg-dourado hover:text-cinza_escuro p-3"
+                  >
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/company/studio-material-duro/"
+                    className="rounded-full bg-dourado hover:text-cinza_escuro p-3"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>

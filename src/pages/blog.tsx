@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { BLOG_POSTS } from "@/lib/constants"
+import { BookOpen } from "lucide-react"
 
 export default function Blog() {
   return (
@@ -39,39 +39,18 @@ export default function Blog() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {BLOG_POSTS.map((post, index) => (
-            <motion.div
-              key={post.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow border border-gray-200"
-            >
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-3">
-                  <span className="text-xs font-medium px-3 py-1 bg-dourado/10 text-cinza_escuro rounded-full">
-                    {post.category}
-                  </span>
-                  <span className="text-xs text-gray-500">{post.date} • {post.readTime}</span>
-                </div>
-                <h3 className="text-xl font-bold text-cinza_escuro mb-3">{post.title}</h3>
-                <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                <Button variant="link" className="p-0 text-dourado hover:text-[#d9a137]">
-                  Continuar Lendo →
-                </Button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col items-center justify-center py-16"
+        >
+          <BookOpen className="h-16 w-16 text-dourado mb-4" />
+          <h3 className="text-2xl font-bold text-cinza_escuro mb-2">Nenhum artigo publicado ainda</h3>
+          <p className="text-cinza_escuro/80 mb-6 max-w-md text-center">
+            Estamos preparando conteúdo especial para você. Volte em breve para conferir nossas novidades!
+          </p>
+        </motion.div>
 
         {/* Newsletter */}
         <motion.div
@@ -85,11 +64,11 @@ export default function Blog() {
             <p className="text-cinza_escuro/80 mb-6 max-w-2xl mx-auto">
               Receba insights exclusivos e atualizações diretamente no seu e-mail
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Seu melhor e-mail" 
+              <input
+                type="email"
+                placeholder="Seu melhor e-mail"
                 className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-dourado"
               />
               <Button className="bg-dourado hover:bg-[#d9a137] text-cinza_escuro whitespace-nowrap">

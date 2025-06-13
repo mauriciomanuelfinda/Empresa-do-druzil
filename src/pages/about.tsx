@@ -39,15 +39,15 @@ export default function About() {
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-dourado/10 p-4 rounded-lg border border-dourado/20">
-                <h3 className="font-bold text-cinza_escuro mb-2">+200</h3>
+                <h3 className="font-bold text-cinza_escuro mb-2">+20</h3>
                 <p className="text-gray-700">Clientes atendidos</p>
               </div>
               <div className="bg-dourado/10 p-4 rounded-lg border border-dourado/20">
-                <h3 className="font-bold text-cinza_escuro mb-2">12+</h3>
+                <h3 className="font-bold text-cinza_escuro mb-2">5+</h3>
                 <p className="text-gray-700">Anos de experiência</p>
               </div>
               <div className="bg-dourado/10 p-4 rounded-lg border border-dourado/20">
-                <h3 className="font-bold text-cinza_escuro mb-2">50+</h3>
+                <h3 className="font-bold text-cinza_escuro mb-2">2+</h3>
                 <p className="text-gray-700">Prêmios criativos</p>
               </div>
             </div>

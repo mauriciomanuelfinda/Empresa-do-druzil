@@ -102,63 +102,6 @@ export const PORTFOLIO_ITEMS = [
 
 export const CATEGORIES = ["Todos", "2D", "3D"]
 
-export const BLOG_POSTS = [
-  {
-    id: 1,
-    title: "Tendências de Design para 2024",
-    excerpt: "As principais tendências visuais que vão dominar o mercado criativo no próximo ano.",
-    image: "/blog/design-trends.jpg",
-    category: "Design",
-    date: "15 Nov 2023",
-    readTime: "5 min"
-  },
-  {
-    id: 2,
-    title: "Como Criar Campanhas que Viralizam",
-    excerpt: "Estratégias comprovadas para aumentar o engajamento orgânico nas redes sociais.",
-    image: "/blog/viral-campaigns.jpg",
-    category: "Marketing",
-    date: "2 Nov 2023",
-    readTime: "8 min"
-  },
-  {
-    id: 3,
-    title: "O Poder do Storytelling nas Marcas",
-    excerpt: "Como narrativas bem construídas podem transformar a percepção do seu público.",
-    image: "/blog/storytelling.jpg",
-    category: "Branding",
-    date: "25 Out 2023",
-    readTime: "6 min"
-  },
-  {
-    id: 4,
-    title: "SEO para Criativos: Guia Completo",
-    excerpt: "Técnicas de otimização para busca orgânica aplicadas ao mercado criativo.",
-    image: "/blog/seo-creatives.jpg",
-    category: "Digital",
-    date: "12 Out 2023",
-    readTime: "10 min"
-  },
-  {
-    id: 5,
-    title: "Design Thinking na Publicidade",
-    excerpt: "Como aplicar metodologias de DT para criar campanhas mais eficientes.",
-    image: "/blog/design-thinking.jpg",
-    category: "Estratégia",
-    date: "5 Out 2023",
-    readTime: "7 min"
-  },
-  {
-    id: 6,
-    title: "O Futuro do Vídeo Marketing",
-    excerpt: "Tendências e inovações no consumo de conteúdo audiovisual.",
-    image: "/blog/video-marketing.jpg",
-    category: "Vídeo",
-    date: "28 Set 2023",
-    readTime: "9 min"
-  }
-]
-
 export const SERVICES_DETAILS = [
   {
     title: "Branding Completo",
