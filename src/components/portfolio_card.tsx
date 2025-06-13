@@ -1,6 +1,7 @@
 import { PortfolioCardProps } from "@/@types/portfolio";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import CustomizerVideo from "./customizer_video";
 
 export const PortfolioCard = ({
   id,
@@ -25,12 +26,10 @@ export const PortfolioCard = ({
       <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow h-full border border-gray-200">
         <div className="aspect-w-16 aspect-h-9 overflow-hidden relative">
           {playingVideo === id ? (
-            <video
+            <CustomizerVideo
               src={video}
-              controls
-              autoPlay
               className="w-full h-64 object-cover"
-              onEnded={onVideoEnd}
+              onVideoEnd={onVideoEnd}
             />
           ) : (
             <>
@@ -65,11 +64,10 @@ export const PortfolioCard = ({
           <p className="text-gray-600 line-clamp-2 mb-3">{description}</p>
           <div className="flex justify-between items-center">
             <span
-              className={`text-xs font-medium px-2 py-1 rounded-full ${
-                category === "2D"
+              className={`text-xs font-medium px-2 py-1 rounded-full ${category === "2D"
                   ? "bg-[#EEB23E]/20 text-[#EEB23E]"
                   : "bg-[#262728]/20 text-[#262728]"
-              }`}
+                }`}
             >
               {category}
             </span>

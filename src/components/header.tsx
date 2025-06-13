@@ -5,7 +5,6 @@ import { Menu, Search } from "lucide-react"
 import Logo from "@/assets/img/logotipo.svg"
 import { menuItems } from "@/lib/constants"
 import { linkClasses } from "@/lib/link_classes"
-
 export function Header() {
   const { pathname } = useLocation()
   const navigte = useNavigate()

@@ -1,5 +1,4 @@
 import { Palette, Video } from "lucide-react";
-import Frame1 from "../assets/videos/Frame-1.mp4"
 import Frame2 from "../assets/videos/Frame-2.mp4"
 import Frame3 from "../assets/videos/Frame-3.mov"
 import Frame4 from "../assets/videos/Frame-4.mov"
@@ -8,7 +7,6 @@ import Frame6 from "../assets/videos/Frame-6.mp4"
 import Frame7 from "../assets/videos/Frame-7.mp4"
 import Frame8 from "../assets/videos/Frame-8.mp4"
 import Frame3D from "../assets/videos/Frame-9.mp4"
-import Frame1_screen from "../assets/img/Frame-1_screen.png"
 import Frame2_screen from "../assets/img/Frame-2_screen.png"
 import Frame3_screen from "../assets/img/Frame-3_screen.png"
 import Frame4_screen from "../assets/img/Frame-4_screen.png"
@@ -26,15 +24,6 @@ export const MemberData = [
 ]
 
 export const PORTFOLIO_ITEMS = [
-  {
-    id: 1,
-    title: "Animação 2D - Campanha Verão",
-    description: "Animação estilo cartoon para campanha de verão com personagens personalizados.",
-    video: Frame1,
-    thumbnail: Frame1_screen,
-    category: "2D",
-    results: "Engajamento 3x maior que padrão do mercado"
-  },
   {
     id: 2,
     title: "Produto em 3D Realista",
